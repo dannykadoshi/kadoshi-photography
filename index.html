@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kadoshi Photography — capturing sports, weddings, portraits, landscapes, pets, street and events with cinematic precision.">
+  <title>Kadoshi Photography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-k">K</span>adoshi
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#contact" class="nav-link nav-link--cta">Book a Session</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tagline reveal-up" data-delay="200">Every frame tells a story</p>
+      <h1 class="hero-title">
+        <span class="reveal-up" data-delay="400">Kadoshi</span>
+        <span class="reveal-up hero-title--thin" data-delay="600">Photography</span>
+      </h1>
+      <p class="hero-sub reveal-up" data-delay="800">
+        Sports &bull; Weddings &bull; Portraits &bull; Landscapes &bull; Pets &bull; Street &bull; Events
+      </p>
+      <div class="hero-actions reveal-up" data-delay="1000">
+        <a href="#work" class="btn btn--gold">View Portfolio</a>
+        <a href="#contact" class="btn btn--ghost">Book Now</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Philosophy Strip -->
+  <section class="philosophy">
+    <div class="philosophy-track">
+      <span>Light &amp; Shadow</span>
+      <span class="dot">&#9679;</span>
+      <span>Decisive Moments</span>
+      <span class="dot">&#9679;</span>
+      <span>Authentic Emotion</span>
+      <span class="dot">&#9679;</span>
+      <span>Cinematic Vision</span>
+      <span class="dot">&#9679;</span>
+      <span>Light &amp; Shadow</span>
+      <span class="dot">&#9679;</span>
+      <span>Decisive Moments</span>
+      <span class="dot">&#9679;</span>
+      <span>Authentic Emotion</span>
+      <span class="dot">&#9679;</span>
+      <span>Cinematic Vision</span>
+      <span class="dot">&#9679;</span>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label reveal-up">Portfolio</p>
+        <h2 class="section-title reveal-up">Selected Work</h2>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs reveal-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sports">Sports</button>
+        <button class="filter-btn" data-filter="weddings">Weddings</button>
+        <button class="filter-btn" data-filter="portraits">Portraits</button>
+        <button class="filter-btn" data-filter="landscapes">Landscapes</button>
+        <button class="filter-btn" data-filter="pets">Pets</button>
+        <button class="filter-btn" data-filter="street">Street</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Sports -->
+        <div class="gallery-item reveal-item" data-category="sports" data-index="0">
+          <div class="gallery-placeholder" style="--ph-hue: 20; --ph-aspect: 1.3;">
+            <div class="ph-label">Sports</div>
+            <div class="ph-icon">&#9889;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Sports</p>
+            <h3 class="gallery-name">In Motion</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-item tall" data-category="sports" data-index="1">
+          <div class="gallery-placeholder" style="--ph-hue: 20; --ph-aspect: 1.8;">
+            <div class="ph-label">Sports</div>
+            <div class="ph-icon">&#127939;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Sports</p>
+            <h3 class="gallery-name">The Athlete</h3>
+          </div>
+        </div>
+
+        <!-- Wedding -->
+        <div class="gallery-item reveal-item" data-category="weddings" data-index="2">
+          <div class="gallery-placeholder" style="--ph-hue: 340; --ph-aspect: 1.3;">
+            <div class="ph-label">Weddings</div>
+            <div class="ph-icon">&#128149;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Weddings</p>
+            <h3 class="gallery-name">Forever Begins</h3>
+          </div>
+        </div>
+
+        <!-- Landscape -->
+        <div class="gallery-item reveal-item wide" data-category="landscapes" data-index="3">
+          <div class="gallery-placeholder" style="--ph-hue: 200; --ph-aspect: 0.7;">
+            <div class="ph-label">Landscapes</div>
+            <div class="ph-icon">&#127956;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Landscapes</p>
+            <h3 class="gallery-name">Golden Hour</h3>
+          </div>
+        </div>
+
+        <!-- Portrait -->
+        <div class="gallery-item reveal-item" data-category="portraits" data-index="4">
+          <div class="gallery-placeholder" style="--ph-hue: 280; --ph-aspect: 1.4;">
+            <div class="ph-label">Portraits</div>
+            <div class="ph-icon">&#128247;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Portraits</p>
+            <h3 class="gallery-name">Soul Portrait</h3>
+          </div>
+        </div>
+
+        <!-- Pets -->
+        <div class="gallery-item reveal-item" data-category="pets" data-index="5">
+          <div class="gallery-placeholder" style="--ph-hue: 60; --ph-aspect: 1.2;">
+            <div class="ph-label">Pets</div>
+            <div class="ph-icon">&#128062;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Pets</p>
+            <h3 class="gallery-name">Best Friends</h3>
+          </div>
+        </div>
+
+        <!-- Street -->
+        <div class="gallery-item reveal-item tall" data-category="street" data-index="6">
+          <div class="gallery-placeholder" style="--ph-hue: 0; --ph-aspect: 1.9;">
+            <div class="ph-label">Street</div>
+            <div class="ph-icon">&#127961;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Street</p>
+            <h3 class="gallery-name">City Pulse</h3>
+          </div>
+        </div>
+
+        <!-- Events -->
+        <div class="gallery-item reveal-item" data-category="events" data-index="7">
+          <div class="gallery-placeholder" style="--ph-hue: 120; --ph-aspect: 1.3;">
+            <div class="ph-label">Events</div>
+            <div class="ph-icon">&#127774;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Events</p>
+            <h3 class="gallery-name">The Moment</h3>
+          </div>
+        </div>
+
+        <!-- Wedding 2 -->
+        <div class="gallery-item reveal-item" data-category="weddings" data-index="8">
+          <div class="gallery-placeholder" style="--ph-hue: 350; --ph-aspect: 1.3;">
+            <div class="ph-label">Weddings</div>
+            <div class="ph-icon">&#128141;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Weddings</p>
+            <h3 class="gallery-name">First Dance</h3>
+          </div>
+        </div>
+
+        <!-- Landscape 2 -->
+        <div class="gallery-item reveal-item" data-category="landscapes" data-index="9">
+          <div class="gallery-placeholder" style="--ph-hue: 190; --ph-aspect: 1.2;">
+            <div class="ph-label">Landscapes</div>
+            <div class="ph-icon">&#127754;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Landscapes</p>
+            <h3 class="gallery-name">Blue Hour</h3>
+          </div>
+        </div>
+
+        <!-- Pets 2 -->
+        <div class="gallery-item reveal-item wide" data-category="pets" data-index="10">
+          <div class="gallery-placeholder" style="--ph-hue: 45; --ph-aspect: 0.7;">
+            <div class="ph-label">Pets</div>
+            <div class="ph-icon">&#128021;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Pets</p>
+            <h3 class="gallery-name">Pure Joy</h3>
+          </div>
+        </div>
+
+        <!-- Portrait 2 -->
+        <div class="gallery-item reveal-item" data-category="portraits" data-index="11">
+          <div class="gallery-placeholder" style="--ph-hue: 260; --ph-aspect: 1.5;">
+            <div class="ph-label">Portraits</div>
+            <div class="ph-icon">&#127775;</div>
+          </div>
+          <div class="gallery-overlay">
+            <p class="gallery-cat">Portraits</p>
+            <h3 class="gallery-name">Natural Light</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-photo-wrap">
+          <div class="about-photo-placeholder">
+            <div class="ph-icon large">&#128247;</div>
+            <p>Your photo here</p>
+          </div>
+          <div class="about-accent-line"></div>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="500">0</span>
+            <span class="stat-label">Sessions</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="7">0</span>
+            <span class="stat-label">Specialties</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="100">0</span>
+            <span class="stat-label">% Passion</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content reveal-right">
+        <p class="section-label">About</p>
+        <h2 class="section-title">The Eye Behind<br><em>the Lens</em></h2>
+        <p class="about-text">
+          I'm Danni Kadoshi — a photographer obsessed with the space between a blink and a memory.
+          Whether I'm courtside at a championship match, deep in a mountain range at sunrise,
+          documenting the tears and laughter of a wedding day, or chasing a golden dog through a field,
+          my mission is always the same: <strong>capture what feels true.</strong>
+        </p>
+        <p class="about-text">
+          Based in Co. Wexford, Ireland, my work spans sports, weddings, portraits, landscapes,
+          street photography, pets, and events — because life doesn't fit in one box, and neither
+          does my lens. Available across Ireland and for travel worldwide. Every session is approached
+          with full commitment, technical precision, and a genuine love for storytelling.
+        </p>
+        <a href="#contact" class="btn btn--gold">Work With Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label reveal-up">Services</p>
+        <h2 class="section-title reveal-up">What I Offer</h2>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal-item">
+          <div class="service-icon">&#128149;</div>
+          <h3>Weddings</h3>
+          <p>Full-day coverage from getting ready to the last dance. Documentary style with editorial polish.</p>
+          <span class="service-tag">From enquiry</span>
+        </div>
+
+        <div class="service-card reveal-item">
+          <div class="service-icon">&#9889;</div>
+          <h3>Sports</h3>
+          <p>High-speed action, decisive moments, raw athleticism. Indoor and outdoor, amateur to professional.</p>
+          <span class="service-tag">From enquiry</span>
+        </div>
+
+        <div class="service-card reveal-item">
+          <div class="service-icon">&#127775;</div>
+          <h3>Portraits</h3>
+          <p>Personal branding, headshots, family portraits. Natural light or studio — always authentic.</p>
+          <span class="service-tag">From enquiry</span>
+        </div>
+
+        <div class="service-card reveal-item">
+          <div class="service-icon">&#127956;</div>
+          <h3>Landscapes</h3>
+          <p>Fine art landscape work. Prints available. Custom location shoots on request.</p>
+          <span class="service-tag">From enquiry</span>
+        </div>
+
+        <div class="service-card reveal-item">
+          <div class="service-icon">&#128062;</div>
+          <h3>Pet Sessions</h3>
+          <p>Because your fur family deserves frame-worthy portraits too. Indoor, outdoor, any breed.</p>
+          <span class="service-tag">From enquiry</span>
+        </div>
+
+        <div class="service-card reveal-item">
+          <div class="service-icon">&#127961;</div>
+          <h3>Street &amp; Events</h3>
+          <p>Corporate events, concerts, festivals, street documentary. Candid, real, powerful.</p>
+          <span class="service-tag">From enquiry</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <p class="section-label reveal-up">Reviews</p>
+      <h2 class="section-title reveal-up">What Clients Say</h2>
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card reveal-item">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"Danni captured our wedding in a way we never imagined possible. Every photo tells a chapter of our story. We cry every time we look at them."</p>
+          <p class="testimonial-author">— Sofia &amp; Marcus</p>
+        </div>
+
+        <div class="testimonial-card reveal-item">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"The sports shots are insane. I didn't know a photographer could freeze that moment. Our football club hired Kadoshi and the results blew everyone away."</p>
+          <p class="testimonial-author">— Coach Reyes, FC United</p>
+        </div>
+
+        <div class="testimonial-card reveal-item">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonial-text">"My dog Luna has never looked so majestic. The pet session was pure fun and the photos are stunning. Already booked a second session."</p>
+          <p class="testimonial-author">— Jamie T.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal-left">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's Create<br><em>Something</em></h2>
+        <p class="contact-text">Every great photo starts with a conversation. Tell me about your vision and let's make it real.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <span class="contact-icon">&#9993;</span>
+            <span>dannykadoshi@icloud.com</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">&#127757;</span>
+            <span>Available in Ireland &amp; travel worldwide</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">&#128205;</span>
+            <span>Based in Co. Wexford, Ireland</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal-right" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="session">Session Type</label>
+          <select id="session" name="session">
+            <option value="">Select a service</option>
+            <option value="wedding">Wedding</option>
+            <option value="sports">Sports</option>
+            <option value="portrait">Portrait</option>
+            <option value="landscape">Landscape</option>
+            <option value="pets">Pet Session</option>
+            <option value="street">Street / Events</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div class="form-group">
+          <label for="message">Tell me about your vision</label>
+          <textarea id="message" name="message" rows="5" placeholder="What are you hoping to capture?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--full">Send Message</button>
+        <p class="form-note">I typically respond within 24 hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="footer-logo">
+        <span class="logo-k">K</span>adoshi Photography
+      </a>
+      <p class="footer-copy">© 2026 Kadoshi Photography. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#work">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
+    <div class="lightbox-info" id="lightboxInfo"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

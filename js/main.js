@@ -207,17 +207,22 @@
     const item = items[current];
     if (!item) return;
 
-    const ph = item.querySelector('.gallery-placeholder');
+    const img  = item.querySelector('img');
     const cat  = item.querySelector('.gallery-cat')?.textContent  || '';
     const name = item.querySelector('.gallery-name')?.textContent || '';
 
     content.innerHTML = '';
     info.innerHTML    = '';
 
-    if (ph) {
-      const clone = ph.cloneNode(true);
-      clone.style.width  = 'min(800px, 85vw)';
-      clone.style.aspectRatio = '4/3';
+    if (img) {
+      const clone = document.createElement('img');
+      clone.src = img.src;
+      clone.alt = img.alt;
+      clone.style.maxWidth     = 'min(900px, 90vw)';
+      clone.style.maxHeight    = '82vh';
+      clone.style.objectFit   = 'contain';
+      clone.style.borderRadius = '2px';
+      clone.style.display      = 'block';
       content.appendChild(clone);
     }
 

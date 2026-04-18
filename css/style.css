@@ -514,6 +514,17 @@ body.light .nav-logo-img--white { display: none; }
   letter-spacing: 0.1em;
 }
 
+.about-photo-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 2px;
+  display: block;
+}
+
+body.light .about-photo-img { filter: none; }
+
 .about-accent-line {
   position: absolute;
   bottom: -20px; right: -20px;

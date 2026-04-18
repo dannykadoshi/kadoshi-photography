@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dannykadoshi.github.io/kadoshi-photography/sitemap.xml

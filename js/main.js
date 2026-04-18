@@ -226,9 +226,11 @@
       content.appendChild(clone);
     }
 
+    const story = item.dataset.story || '';
     info.innerHTML = `
       <p class="gallery-cat">${cat}</p>
       <h3 class="gallery-name">${name}</h3>
+      ${story ? `<p class="gallery-story">${story}</p>` : ''}
     `;
 
     prevBtn.style.display = items.length > 1 ? '' : 'none';

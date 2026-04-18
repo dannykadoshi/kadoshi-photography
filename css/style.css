@@ -930,8 +930,16 @@ body.light .footer-logo-img--gold  { display: block; }
   text-align: center;
 }
 
-.lightbox-info .gallery-cat { margin-bottom: 4px; }
-.lightbox-info .gallery-name { font-family: var(--font-serif); font-size: 1.6rem; }
+.lightbox-info .gallery-cat  { margin-bottom: 4px; }
+.lightbox-info .gallery-name { font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 12px; }
+.lightbox-info .gallery-story {
+  font-size: 0.82rem;
+  color: rgba(245, 240, 232, 0.65);
+  line-height: 1.75;
+  font-style: italic;
+  max-width: 560px;
+  margin: 0 auto;
+}
 
 /* --- Reveal Animations --- */
 .reveal-up, .reveal-left, .reveal-right, .reveal-item {

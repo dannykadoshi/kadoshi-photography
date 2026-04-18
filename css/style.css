@@ -1000,3 +1000,179 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7) sepi
   .filter-tabs  { gap: 6px; }
   .filter-btn   { padding: 6px 12px; font-size: 0.6rem; }
 }
+
+/* ============================================================
+   THEME TOGGLE BUTTON
+   ============================================================ */
+.theme-toggle {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 169, 110, 0.35);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  color: var(--gold);
+  transition: border-color 0.25s, background 0.25s, transform 0.25s;
+  flex-shrink: 0;
+}
+.theme-toggle:hover { border-color: var(--gold); transform: rotate(20deg); }
+
+.theme-toggle-icon { line-height: 1; transition: opacity 0.2s; }
+.theme-toggle-icon--light { display: none; }
+
+body.light .theme-toggle-icon--dark  { display: none; }
+body.light .theme-toggle-icon--light { display: block; }
+
+/* ============================================================
+   LIGHT THEME  (white + gold)
+   ============================================================ */
+body {
+  transition: background 0.4s, color 0.4s;
+}
+
+body.light {
+  background: #faf8f4;
+  color: #1c1a17;
+}
+
+/* Nav */
+body.light .nav.scrolled {
+  background: rgba(250, 248, 244, 0.95);
+  border-bottom-color: rgba(201, 169, 110, 0.2);
+}
+body.light .nav-link          { color: rgba(28, 26, 23, 0.65); }
+body.light .nav-link:hover    { color: #1c1a17; }
+body.light .nav-link--cta     { color: var(--gold) !important; }
+
+/* Mobile nav panel */
+@media (max-width: 768px) {
+  body.light .nav-links { background: rgba(250, 248, 244, 0.98); }
+}
+
+/* Hero — light feels editorial/clean */
+body.light .hero-bg {
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(201, 169, 110, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(201, 169, 110, 0.06) 0%, transparent 50%),
+    linear-gradient(160deg, #f5ede0 0%, #faf8f4 40%, #f0f2f8 100%);
+}
+body.light .hero-overlay { opacity: 0.15; }
+body.light .hero-gradient { background: linear-gradient(to top, #faf8f4, transparent); }
+body.light .hero-title    { color: #1c1a17; }
+body.light .hero-tagline  { color: var(--gold-dark); }
+body.light .hero-sub      { color: rgba(28, 26, 23, 0.55); }
+body.light .hero-scroll   { color: rgba(28, 26, 23, 0.45); }
+
+/* Btn ghost in light mode */
+body.light .btn--ghost {
+  color: #1c1a17;
+  border-color: rgba(28, 26, 23, 0.3);
+}
+body.light .btn--ghost:hover { border-color: #1c1a17; }
+
+/* Philosophy strip */
+body.light .philosophy {
+  background: #f0ebe1;
+  border-color: rgba(201, 169, 110, 0.25);
+}
+body.light .philosophy-track { color: rgba(28, 26, 23, 0.55); }
+
+/* Work / Gallery */
+body.light .work { background: #faf8f4; }
+body.light .filter-btn {
+  color: rgba(28, 26, 23, 0.55);
+  border-color: rgba(28, 26, 23, 0.15);
+}
+body.light .filter-btn:hover  { border-color: var(--gold-dark); color: var(--gold-dark); }
+body.light .filter-btn.active { background: var(--gold-dark); border-color: var(--gold-dark); color: #fff; }
+
+body.light .gallery-placeholder {
+  background: radial-gradient(
+    ellipse at 40% 40%,
+    hsl(calc(var(--ph-hue) * 1deg), 25%, 88%) 0%,
+    hsl(calc(var(--ph-hue) * 1deg), 15%, 78%) 100%
+  );
+}
+body.light .ph-label { color: rgba(28, 26, 23, 0.45); }
+body.light .gallery-name { color: #faf8f4; }
+
+/* About */
+body.light .about { background: #f0ebe1; }
+body.light .about-photo-placeholder {
+  background: #e2d9cc;
+  color: rgba(28, 26, 23, 0.55);
+}
+body.light .about-accent-line { border-color: rgba(201, 169, 110, 0.3); }
+body.light .stat { background: #faf8f4; border-top-color: var(--gold-dark); }
+body.light .stat-label { color: rgba(28, 26, 23, 0.55); }
+body.light .about-text { color: rgba(28, 26, 23, 0.7); }
+body.light .about-text strong { color: #1c1a17; }
+
+/* Services */
+body.light .services { background: #faf8f4; }
+body.light .service-card {
+  background: #fff;
+  border-color: rgba(28, 26, 23, 0.08);
+}
+body.light .service-card:hover {
+  border-color: rgba(201, 169, 110, 0.4);
+  box-shadow: 0 20px 60px rgba(201, 169, 110, 0.12);
+}
+body.light .service-card p { color: rgba(28, 26, 23, 0.65); }
+
+/* Testimonials */
+body.light .testimonials { background: #f0ebe1; }
+body.light .testimonial-card {
+  background: #fff;
+  border-color: rgba(28, 26, 23, 0.07);
+}
+body.light .testimonial-card::before { color: var(--gold); opacity: 0.2; }
+body.light .testimonial-text { color: rgba(28, 26, 23, 0.65); }
+
+/* Contact */
+body.light .contact { background: #faf8f4; }
+body.light .contact-text { color: rgba(28, 26, 23, 0.65); }
+body.light .contact-detail { color: rgba(28, 26, 23, 0.65); }
+body.light .contact-icon {
+  background: #f0ebe1;
+  border-color: rgba(201, 169, 110, 0.3);
+}
+body.light .social-link {
+  border-color: rgba(28, 26, 23, 0.15);
+  color: rgba(28, 26, 23, 0.55);
+}
+body.light .social-link:hover { border-color: var(--gold-dark); color: var(--gold-dark); }
+
+body.light .contact-form {
+  background: #fff;
+  border-color: rgba(28, 26, 23, 0.08);
+  box-shadow: 0 8px 40px rgba(28, 26, 23, 0.06);
+}
+body.light .form-group input,
+body.light .form-group select,
+body.light .form-group textarea {
+  background: #faf8f4;
+  border-color: rgba(28, 26, 23, 0.15);
+  color: #1c1a17;
+}
+body.light .form-group input:focus,
+body.light .form-group select:focus,
+body.light .form-group textarea:focus { border-color: var(--gold-dark); }
+body.light .form-group input::placeholder,
+body.light .form-group textarea::placeholder { color: rgba(28, 26, 23, 0.3); }
+body.light .form-group select option { background: #faf8f4; color: #1c1a17; }
+body.light .form-note { color: rgba(28, 26, 23, 0.5); }
+body.light input[type="date"]::-webkit-calendar-picker-indicator { filter: none; opacity: 0.5; }
+
+/* Footer */
+body.light .footer {
+  background: #f0ebe1;
+  border-top-color: rgba(201, 169, 110, 0.2);
+}
+body.light .footer-copy  { color: rgba(28, 26, 23, 0.5); }
+body.light .footer-nav a { color: rgba(28, 26, 23, 0.5); }
+
+/* Section labels & titles in light */
+body.light .section-label { color: var(--gold-dark); }
+
+/* Cursor ring in light */
+body.light .cursor-ring { border-color: rgba(160, 121, 63, 0.4); }

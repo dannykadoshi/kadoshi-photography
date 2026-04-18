@@ -4,6 +4,27 @@
 
 'use strict';
 
+// --- Theme Toggle ---
+(function initTheme() {
+  const btn  = document.getElementById('themeToggle');
+  const body = document.body;
+  const KEY  = 'kadoshi-theme';
+
+  function apply(theme) {
+    if (theme === 'light') body.classList.add('light');
+    else body.classList.remove('light');
+  }
+
+  // Restore saved preference
+  apply(localStorage.getItem(KEY) || 'dark');
+
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const isLight = body.classList.toggle('light');
+    localStorage.setItem(KEY, isLight ? 'light' : 'dark');
+  });
+})();
+
 // --- Custom Cursor ---
 (function initCursor() {
   const dot  = document.getElementById('cursorDot');

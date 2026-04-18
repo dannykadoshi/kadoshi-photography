@@ -90,19 +90,25 @@ body.cursor-hover .cursor-ring { width: 60px; height: 60px; border-color: var(--
 }
 
 .nav-logo {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
   transition: opacity 0.2s;
 }
-.nav-logo:hover { opacity: 0.75; }
+.nav-logo:hover { opacity: 0.8; }
 
-.logo-k {
-  color: var(--gold);
-  font-size: 1.8rem;
-  font-weight: 600;
+/* Navbar K monogram */
+.nav-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  transition: opacity 0.3s;
 }
+.nav-logo-img--white { display: none; }
+.nav-logo-img--gold  { display: block; }
+
+/* Light mode: keep gold K in navbar (reads well on cream bg) */
+body.light .nav-logo-img--gold  { display: block; }
+body.light .nav-logo-img--white { display: none; }
 
 .nav-links {
   display: flex;
@@ -825,9 +831,21 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(0.7) sepi
 }
 
 .footer-logo {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
 }
+
+/* Footer full logo */
+.footer-logo-img {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+.footer-logo-img--gold  { display: none; }
+.footer-logo-img--white { display: block; }
+
+body.light .footer-logo-img--white { display: none; }
+body.light .footer-logo-img--gold  { display: block; }
 
 .footer-copy {
   font-size: 0.75rem;

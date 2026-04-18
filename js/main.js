@@ -239,23 +239,59 @@
 })();
 
 
-// --- Contact Form ---
+// --- Contact Form (Formspree) ---
 (function initForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  form.addEventListener('submit', e => {
+  // If no real Formspree ID yet, show a demo success message instead of 404ing
+  const action = form.getAttribute('action') || '';
+  const isDemo = action.includes('YOUR_FORM_ID');
+
+  form.addEventListener('submit', async e => {
+    if (isDemo) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Message Sent!';
+      btn.style.background = '#4caf50';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.style.background = '';
+        btn.disabled = false;
+        form.reset();
+      }, 3500);
+      return;
+    }
+
+    // Real Formspree submission
     e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Message Sent!';
-    btn.style.background = '#4caf50';
+    const btn  = form.querySelector('button[type="submit"]');
+    const data = new FormData(form);
+    btn.textContent = 'Sending…';
     btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.style.background = '';
+
+    try {
+      const res = await fetch(action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+      if (res.ok) {
+        btn.textContent = 'Message Sent!';
+        btn.style.background = '#4caf50';
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = 'Send Message';
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      } else {
+        btn.textContent = 'Error — try again';
+        btn.style.background = '#e53935';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Error — try again';
+      btn.style.background = '#e53935';
       btn.disabled = false;
-      form.reset();
-    }, 3500);
+    }
   });
 })();
 

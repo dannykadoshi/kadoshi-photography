@@ -25,7 +25,12 @@
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 body {
   background: var(--black);
@@ -34,6 +39,7 @@ body {
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
+  max-width: 100%;
   cursor: none;
 }
 
@@ -1031,8 +1037,8 @@ body.light .scroll-top { background: rgba(250, 248, 244, 0.9); }
   .cursor-dot, .cursor-ring { display: none; }
 
   /* Nav */
-  .nav { padding: 0 16px; }
-  .nav-right { gap: 8px; }
+  .nav { padding: 0 20px; }
+  .nav-right { gap: 6px; }
   .nav-toggle { display: flex; }
   .nav-logo-img { height: 38px; }
 
@@ -1120,7 +1126,7 @@ body.light .scroll-top { background: rgba(250, 248, 244, 0.9); }
   .contact-form   { padding: 28px 20px; }
 
   /* Scroll to top */
-  .scroll-top { bottom: 20px; right: 16px; width: 40px; height: 40px; }
+  .scroll-top { bottom: 20px; right: 20px; width: 40px; height: 40px; }
 
   /* Footer */
   .footer-inner   { flex-direction: column; align-items: center; text-align: center; gap: 16px; }

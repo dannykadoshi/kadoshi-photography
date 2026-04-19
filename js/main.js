@@ -327,6 +327,14 @@
 })();
 
 
+// --- Service Worker ---
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/kadoshi-photography/sw.js');
+  });
+}
+
+
 // --- Smooth anchor scroll with offset ---
 (function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

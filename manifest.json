@@ -1,0 +1,35 @@
+{
+  "name": "Kadoshi Photography",
+  "short_name": "Kadoshi",
+  "description": "Professional photographer based in Co. Wexford, Ireland. Weddings, sports, portraits, family, pets, landscapes, street and events.",
+  "start_url": "/kadoshi-photography/",
+  "scope": "/kadoshi-photography/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "categories": ["photography", "business"],
+  "icons": [
+    {
+      "src": "images/logo-k-gold.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/logo-k-gold.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/landscape-curracloe-golden.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Kadoshi Photography Portfolio"
+    }
+  ]
+}

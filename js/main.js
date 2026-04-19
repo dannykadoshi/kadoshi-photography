@@ -218,11 +218,7 @@
       const clone = document.createElement('img');
       clone.src = img.src;
       clone.alt = img.alt;
-      clone.style.maxWidth     = 'min(900px, 90vw)';
-      clone.style.maxHeight    = '82vh';
-      clone.style.objectFit   = 'contain';
-      clone.style.borderRadius = '2px';
-      clone.style.display      = 'block';
+      clone.className = 'lightbox-img';
       content.appendChild(clone);
     }
 

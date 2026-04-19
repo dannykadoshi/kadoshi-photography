@@ -924,6 +924,14 @@ body.light .footer-logo-img--gold  { display: block; }
   position: relative;
 }
 
+.lightbox-img {
+  max-width: min(900px, 90vw);
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: 2px;
+  display: block;
+}
+
 .lightbox-content .gallery-placeholder {
   width: min(800px, 85vw);
   aspect-ratio: 4/3;
@@ -1112,9 +1120,34 @@ body.light .scroll-top { background: rgba(250, 248, 244, 0.9); }
   .stat-label     { font-size: 0.55rem; }
   .about-photo-img { aspect-ratio: auto; height: auto; max-height: none; }
 
-  /* Services */
-  .services-grid  { grid-template-columns: 1fr; }
-  .service-card   { padding: 28px 24px; }
+  /* Services — 2 cards per row on mobile */
+  .services-grid  { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .service-card   { padding: 20px 16px; }
+  .service-card h3 { font-size: 1.15rem; }
+  .service-card p  { font-size: 0.8rem; margin-bottom: 16px; }
+  .service-icon    { font-size: 1.5rem; margin-bottom: 12px; }
+
+  /* Lightbox — column layout, info below image */
+  .lightbox {
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    padding: 52px 0 24px;
+  }
+  .lightbox-content { max-width: 100vw; max-height: none; }
+  .lightbox-img { max-width: 96vw; max-height: 56vh; }
+  .lightbox-info {
+    position: static;
+    transform: none;
+    left: auto;
+    bottom: auto;
+    padding: 16px 20px 4px;
+    width: 100%;
+  }
+  .lightbox-nav { top: auto; bottom: 8px; transform: none; }
+  .lightbox-nav:hover { transform: none; }
+  .lightbox-prev { left: 20px; }
+  .lightbox-next { right: 20px; }
 
   /* Testimonials */
   .testimonial-grid  { grid-template-columns: 1fr; }

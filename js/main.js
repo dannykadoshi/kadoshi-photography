@@ -4,9 +4,12 @@
 
 'use strict';
 
-// --- Theme Toggle ---
+// --- Theme Toggle (syncs desktop + mobile buttons) ---
 (function initTheme() {
-  const btn  = document.getElementById('themeToggle');
+  const btns = [
+    document.getElementById('themeToggle'),
+    document.getElementById('themeToggleMobile')
+  ].filter(Boolean);
   const body = document.body;
   const KEY  = 'kadoshi-theme';
 
@@ -15,13 +18,13 @@
     else body.classList.remove('light');
   }
 
-  // Restore saved preference
   apply(localStorage.getItem(KEY) || 'dark');
 
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    const isLight = body.classList.toggle('light');
-    localStorage.setItem(KEY, isLight ? 'light' : 'dark');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isLight = body.classList.toggle('light');
+      localStorage.setItem(KEY, isLight ? 'light' : 'dark');
+    });
   });
 })();
 

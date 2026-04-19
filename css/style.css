@@ -154,12 +154,15 @@ body.light .nav-logo-img--white { display: none; }
   color: var(--black) !important;
 }
 
-.nav-right {
-  display: flex;
+/* Mobile right cluster — hidden on desktop */
+.nav-mobile-right {
+  display: none;
   align-items: center;
-  gap: 8px;
-  margin-left: auto;
+  gap: 6px;
 }
+
+/* Desktop theme toggle li — visible on desktop, hidden on mobile */
+.nav-toggle-desktop { display: flex; align-items: center; }
 
 .nav-toggle {
   display: none;
@@ -1000,15 +1003,22 @@ body.light .footer-logo-img--gold  { display: block; }
   .cursor-dot, .cursor-ring { display: none; }
 
   /* Nav */
-  .nav { padding: 0 16px; gap: 12px; }
-  .nav-right { gap: 4px; }
+  .nav { padding: 0 16px; }
+  .nav-mobile-right { display: flex; }
+  .nav-toggle-desktop { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-logo-img { height: 38px; }
+
   .nav-links {
     position: fixed;
     top: var(--nav-h); left: 0; right: 0;
     background: rgba(10,10,10,0.98);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+    display: flex;
     flex-direction: column;
+    align-items: stretch;
+    list-style: none;
     gap: 0;
     padding: 16px 0 24px;
     transform: translateY(-110%);
@@ -1020,15 +1030,13 @@ body.light .footer-logo-img--gold  { display: block; }
   .nav-link {
     display: block;
     padding: 14px 24px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   .nav-link--cta {
     margin: 12px 24px 0;
     display: inline-block;
     text-align: center;
   }
-  .nav-toggle { display: flex; }
-  .nav-logo-img { height: 38px; }
 
   /* Hero */
   .hero-title { font-size: clamp(2.8rem, 13vw, 5rem); }
@@ -1062,7 +1070,7 @@ body.light .footer-logo-img--gold  { display: block; }
   .stat           { padding: 14px 8px; }
   .stat-num       { font-size: 1.6rem; }
   .stat-label     { font-size: 0.55rem; }
-  .about-photo-img { aspect-ratio: 4 / 3; }
+  .about-photo-img { aspect-ratio: unset; max-height: 480px; }
 
   /* Services */
   .services-grid  { grid-template-columns: 1fr; }
@@ -1156,6 +1164,7 @@ body.light .nav-link--cta     { color: var(--gold) !important; }
 @media (max-width: 768px) {
   body.light .nav-links { background: rgba(250, 248, 244, 0.98); }
   body.light .nav-toggle span { background: #1c1a17; }
+body.light .nav-links { background: rgba(250, 248, 244, 0.98); }
 }
 
 /* Hero — light feels editorial/clean */

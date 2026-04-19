@@ -104,8 +104,21 @@
       <img src="images/logo-k-gold.png" alt="Kadoshi Photography" class="nav-logo-img nav-logo-img--gold">
       <img src="images/logo-k-white.png" alt="Kadoshi Photography" class="nav-logo-img nav-logo-img--white">
     </a>
-    <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#contact" class="nav-link nav-link--cta">Book a Session</a></li>
+      <li class="nav-toggle-desktop">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <span class="theme-toggle-icon theme-toggle-icon--dark">☀</span>
+          <span class="theme-toggle-icon theme-toggle-icon--light">☽</span>
+        </button>
+      </li>
+    </ul>
+    <!-- Mobile only: theme toggle + hamburger always visible -->
+    <div class="nav-mobile-right">
+      <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Toggle theme">
         <span class="theme-toggle-icon theme-toggle-icon--dark">☀</span>
         <span class="theme-toggle-icon theme-toggle-icon--light">☽</span>
       </button>
@@ -113,12 +126,6 @@
         <span></span><span></span><span></span>
       </button>
     </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#work" class="nav-link">Work</a></li>
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#services" class="nav-link">Services</a></li>
-      <li><a href="#contact" class="nav-link nav-link--cta">Book a Session</a></li>
-    </ul>
   </nav>
 
   <!-- Hero -->

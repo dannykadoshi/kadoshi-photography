@@ -1091,17 +1091,14 @@ body.light .scroll-top { background: rgba(250, 248, 244, 0.9); }
   .hero-sub   { font-size: 0.62rem; letter-spacing: 0.1em; padding: 0 12px; }
   .hero-actions { gap: 12px; }
 
-  /* Filter tabs — horizontal scroll on mobile */
+  /* Filter tabs — wrap into rows on mobile */
   .filter-tabs {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding-bottom: 8px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    overflow-x: unset;
   }
-  .filter-tabs::-webkit-scrollbar { display: none; }
-  .filter-btn { flex-shrink: 0; }
+  .filter-btn { font-size: 0.7rem; padding: 6px 14px; }
 
   /* Gallery */
   .gallery-grid {

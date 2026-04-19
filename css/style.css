@@ -550,7 +550,7 @@ body.light .about-photo-img { filter: none; }
 
 .about-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -1111,7 +1111,7 @@ body.light .scroll-top { background: rgba(250, 248, 244, 0.9); }
   .about-grid     { grid-template-columns: 1fr; gap: 40px; }
   .about-visual   { order: 2; }
   .about-content  { order: 1; }
-  .about-stats    { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .about-stats    { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .stat           { padding: 14px 8px; }
   .stat-num       { font-size: 1.6rem; }
   .stat-label     { font-size: 0.55rem; }

@@ -6,10 +6,7 @@
 
 // --- Theme Toggle (syncs desktop + mobile buttons) ---
 (function initTheme() {
-  const btns = [
-    document.getElementById('themeToggle'),
-    document.getElementById('themeToggleMobile')
-  ].filter(Boolean);
+  const btn  = document.getElementById('themeToggle');
   const body = document.body;
   const KEY  = 'kadoshi-theme';
 
@@ -20,12 +17,12 @@
 
   apply(localStorage.getItem(KEY) || 'dark');
 
-  btns.forEach(btn => {
+  if (btn) {
     btn.addEventListener('click', () => {
       const isLight = body.classList.toggle('light');
       localStorage.setItem(KEY, isLight ? 'light' : 'dark');
     });
-  });
+  }
 })();
 
 // --- Custom Cursor ---

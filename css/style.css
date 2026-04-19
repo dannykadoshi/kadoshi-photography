@@ -1018,10 +1018,17 @@ body.light .footer-logo-img--gold  { display: block; }
     gap: 0;
     padding: 16px 0 24px;
     transform: translateY(-110%);
-    transition: transform 0.4s var(--ease-out);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.4s var(--ease-out), visibility 0s 0.4s;
     z-index: 999;
   }
-  .nav-links.open { transform: translateY(0); }
+  .nav-links.open {
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 0.4s var(--ease-out), visibility 0s 0s;
+  }
   .nav-links li { width: 100%; }
   .nav-link {
     display: block;

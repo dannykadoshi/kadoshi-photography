@@ -324,6 +324,21 @@
 })();
 
 
+// --- Scroll to Top ---
+(function initScrollTop() {
+  const btn = document.getElementById('scrollTop');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+
 // --- Service Worker ---
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {

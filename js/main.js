@@ -320,6 +320,27 @@
 })();
 
 
+// --- Hero Image Carousel ---
+(function initHeroCarousel() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (slides.length < 2) return;
+
+  let current = 0;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    current = index;
+    const next = slides[current];
+    next.style.animation = 'none';
+    next.offsetHeight; // force reflow to restart Ken Burns
+    next.style.animation = '';
+    next.classList.add('active');
+  }
+
+  setInterval(() => goTo((current + 1) % slides.length), 6000);
+})();
+
+
 // --- Scroll to Top ---
 (function initScrollTop() {
   const btn = document.getElementById('scrollTop');

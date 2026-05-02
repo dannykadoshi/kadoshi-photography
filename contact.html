@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Session | Kadoshi Photography — Co. Wexford, Ireland</title>
+  <meta name="description" content="Book your photography session with Kadoshi Photography in Co. Wexford, Ireland. Weddings, portraits, sports, family, pets, corporate events and more. Get in touch today.">
+  <meta name="author" content="Danni Kadoshi">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dannikadoshi.com/contact.html">
+  <meta name="geo.region" content="IE-WX">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kadoshi Photography">
+  <meta property="og:title" content="Book a Session | Kadoshi Photography — Co. Wexford, Ireland">
+  <meta property="og:description" content="Book your photography session with Kadoshi Photography. Based in Co. Wexford, available across Ireland.">
+  <meta property="og:url" content="https://dannikadoshi.com/contact.html">
+  <meta property="og:image" content="https://dannikadoshi.com/images/wedding-church-kiss.png">
+  <meta property="og:locale" content="en_IE">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo-k-gold.png">
+  <link rel="apple-touch-icon" href="images/logo-k-gold.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Kadoshi">
+</head>
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo-k-gold.png" alt="Kadoshi Photography" class="nav-logo-img nav-logo-img--gold">
+      <img src="images/logo-k-white.png" alt="Kadoshi Photography" class="nav-logo-img nav-logo-img--white">
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="portfolio.html" class="nav-link">Work</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link nav-link--cta" aria-current="page">Book a Session</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+        <span class="theme-toggle-icon theme-toggle-icon--dark">☀</span>
+        <span class="theme-toggle-icon theme-toggle-icon--light">☽</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <p class="section-label reveal-up">Contact</p>
+    <h1 class="page-hero-title reveal-up">Let's Create <em>Something</em></h1>
+    <p class="page-hero-sub reveal-up">Every great photo starts with a conversation</p>
+    <div class="page-hero-line"></div>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal-left">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Tell Me About<br><em>Your Vision</em></h2>
+        <p class="contact-text">Whether you have a clear idea or just a feeling — let's talk. I'll help you figure out exactly what you need and make it happen.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <span class="contact-icon">&#9993;</span>
+            <span>hello@dannikadoshi.com</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">&#127757;</span>
+            <span>Available in Ireland &amp; travel worldwide</span>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-icon">&#128205;</span>
+            <span>Based in Co. Wexford, Ireland</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://www.facebook.com/kadoshiphotography/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal-right" id="contactForm" action="https://formspree.io/f/xbdqyorw" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="session">Session Type</label>
+          <select id="session" name="session">
+            <option value="">Select a service</option>
+            <option value="wedding">Wedding</option>
+            <option value="couples-portrait">Couples Portrait</option>
+            <option value="family-portrait">Family Portrait</option>
+            <option value="portrait">Individual Portrait</option>
+            <option value="sports">Sports</option>
+            <option value="landscape">Landscape</option>
+            <option value="pets">Pet Session</option>
+            <option value="corporate-events">Corporate Events</option>
+            <option value="street">Street / Events</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div class="form-group">
+          <label for="message">Tell me about your vision</label>
+          <textarea id="message" name="message" rows="5" placeholder="What are you hoping to capture?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--full">Send Message</button>
+        <p class="form-note">I typically respond within 24 hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Kadoshi Photography. All rights reserved. · <a href="https://www.facebook.com/kadoshiphotography/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="footer-social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></p>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#8593;</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

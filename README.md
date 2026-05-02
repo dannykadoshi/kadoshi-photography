@@ -4,7 +4,7 @@
 
 ### Dark cinematic photography portfolio — built to book clients
 
-[![Live Site](https://img.shields.io/badge/🌐%20View%20Live%20Site-dannykadoshi.github.io/kadoshi--photography-c9a96e?style=for-the-badge&labelColor=0a0a0a)](https://dannykadoshi.github.io/kadoshi-photography/)
+[![Live Site](https://img.shields.io/badge/🌐%20View%20Live%20Site-dannikadoshi.com-c9a96e?style=for-the-badge&labelColor=0a0a0a)](https://dannikadoshi.com/)
 
 </div>
 
@@ -99,12 +99,12 @@ Hosted on **GitHub Pages** — every push to `main` deploys automatically.
 To connect a custom domain:
 1. Buy a domain (Namecheap, Porkbun, etc.)
 2. In the repo → **Settings → Pages → Custom domain**, enter your domain
-3. Add a `CNAME` record at your registrar pointing to `dannykadoshi.github.io`
+3. Add a `CNAME` record at your registrar pointing to `dannikadoshi.com`
 
 ---
 
 <div align="center">
 
-Built by [Danni Kadoshi](https://dannykadoshi.github.io) · Co. Wexford, Ireland
+Built by [Danni Kadoshi](https://dannikadoshi.com) · Co. Wexford, Ireland
 
 </div>
